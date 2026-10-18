@@ -1,2 +1,3 @@
 idf_component_register(SRCS "vm_ui.c"
-                    INCLUDE_DIRS "include")
+                    INCLUDE_DIRS "include"
+                    REQUIRES esp_event)

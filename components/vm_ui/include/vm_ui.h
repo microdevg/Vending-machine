@@ -16,6 +16,7 @@ void ui_init(esp_event_loop_handle_t loop_handler);
 void ui_deinit(void);
 
 // Ejemplo de función para simular la selección de un producto desde la UI
-void ui_select_product(uint8_t product_id);
+
+void ui_select_product(uint32_t product_id);
 
 #endif // VM_UI_H

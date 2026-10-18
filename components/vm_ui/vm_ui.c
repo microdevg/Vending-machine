@@ -13,6 +13,12 @@ static esp_event_loop_handle_t ui_loop_handle = NULL;
 void ui_init(esp_event_loop_handle_t loop_handler) {
     ui_loop_handle = loop_handler;
     ESP_LOGI(TAG, "Interfaz de usuario inicializada.");
+
+
+    // Prueba: Simular la selección de un producto después de 2 segundos
+
+    vTaskDelay(pdMS_TO_TICKS(10000));
+    ui_select_product(42);  // Simula que el usuario selecciona el producto con ID 42
 }
 
 void ui_deinit(void) {
@@ -21,8 +27,9 @@ void ui_deinit(void) {
 }
 
 // Función que se llamaría cuando el usuario toca la pantalla
-void ui_select_product(uint8_t product_id) {
+void ui_select_product(uint32_t product_id) {
     if (ui_loop_handle == NULL) return;
+   
 
     ESP_LOGI(TAG, "Producto %d seleccionado por el usuario. Publicando evento...", product_id);
 

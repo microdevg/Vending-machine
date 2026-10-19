@@ -1,0 +1,42 @@
+menu "Vending Machine - Comunicaciones (COMM)"
+
+    config COMM_HOST
+        string "Host o IP del servidor"
+        default "192.168.1.100"
+
+    config COMM_PORT
+        int "Puerto TCP del servidor"
+        default 8080
+
+    config COMM_DEVICE_ID
+        string "Identificador de la maquina"
+        default "vm-01"
+        help
+            Se envia en el mensaje "hello" al conectar. Maximo 32 caracteres.
+
+    config COMM_USE_TLS
+        bool "Habilitar conexion segura (TLS/SSL)"
+        default n
+        help
+            Si se activa, utiliza esp_tls para una conexion cifrada y valida el
+            servidor con components/comm/certs/server.crt.
+            Si se desactiva, utiliza sockets lwIP tradicionales.
+
+    config COMM_RESPONSE_TIMEOUT_MS
+        int "Timeout de respuesta del servidor (ms)"
+        default 5000
+        help
+            Tiempo maximo de espera para hello_ack, pong y pay_resp.
+
+    config COMM_PING_INTERVAL_MS
+        int "Intervalo de ping (ms)"
+        default 10000
+        help
+            Se envia un ping si no hubo trafico en este tiempo. Debe ser menor
+            al timeout de inactividad del servidor (30 s).
+
+    config COMM_RECONNECT_DELAY_MS
+        int "Espera entre reintentos de conexion (ms)"
+        default 3000
+
+endmenu

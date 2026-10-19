@@ -1,0 +1,10 @@
+CONFIG_IDF_TARGET="esp32s3"
+
+# Conexión Wi-Fi (protocol_examples_common). SSID y password: menuconfig ->
+# "Example Connection Configuration". No subir credenciales al repo.
+CONFIG_EXAMPLE_CONNECT_WIFI=y
+CONFIG_EXAMPLE_CONNECT_ETHERNET=n
+CONFIG_EXAMPLE_CONNECT_IPV6=n
+
+# Comunicación con el servidor (sin TLS en esta etapa)
+CONFIG_COMM_USE_TLS=n

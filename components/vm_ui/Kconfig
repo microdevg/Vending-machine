@@ -1,0 +1,15 @@
+menu "Vending Machine - Interfaz de usuario (UI)"
+
+    config VM_UI_SIMULATE
+        bool "Simular selecciones de producto"
+        default y
+        help
+            Crea una tarea que selecciona productos periódicamente, para probar
+            el flujo completo sin pantalla ni botones.
+
+    config VM_UI_SIMULATE_INTERVAL_MS
+        int "Intervalo entre selecciones simuladas (ms)"
+        depends on VM_UI_SIMULATE
+        default 10000
+
+endmenu

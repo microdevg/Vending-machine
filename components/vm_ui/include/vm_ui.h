@@ -6,6 +6,12 @@
 // Declaración pública de la base de eventos
 ESP_EVENT_DECLARE_BASE(UI_EVENT_BASE);
 
+// Definición de la estructura del producto
+typedef struct {
+    const char *description;
+    float price;
+} ui_product_t;
+
 typedef enum {
     UI_EVENT_PRODUCT_SELECTED,
     UI_EVENT_CANCEL_PRESSED,
@@ -18,5 +24,7 @@ void ui_deinit(void);
 // Ejemplo de función para simular la selección de un producto desde la UI
 
 void ui_select_product(uint32_t product_id);
+
+
 
 #endif // VM_UI_H

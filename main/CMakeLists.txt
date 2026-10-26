@@ -1,3 +1,3 @@
 idf_component_register(SRCS "main.c"
                     INCLUDE_DIRS "."
-                    REQUIRES vending_machine)
+                    REQUIRES vending_machine display_gui)

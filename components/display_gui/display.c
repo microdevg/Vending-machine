@@ -70,11 +70,11 @@ void display_gui_update_lines(const char *line1, const char *line2)
 {
     _lock_acquire(&lvgl_api_lock);
     
-    if (line1 != NULL && ui_lbllinea1 != NULL) {
-        lv_label_set_text(ui_lbllinea1, line1);
+    if (line1 != NULL && ui_Lbllinea1 != NULL) {
+        lv_label_set_text(ui_Lbllinea1, line1);
     }
-    if (line2 != NULL && ui_lbllinea2 != NULL) {
-        lv_label_set_text(ui_lbllinea2, line2);
+    if (line2 != NULL && ui_Lbllinea2 != NULL) {
+        lv_label_set_text(ui_Lbllinea2, line2);
     }
     
     _lock_release(&lvgl_api_lock);

@@ -16,7 +16,7 @@ extern void ui_Screen1_screen_destroy(void);
 extern lv_obj_t * ui_Screen1;
 extern lv_obj_t * ui_Label1;
 extern lv_obj_t * ui_Lbllinea1;
-extern lv_obj_t * ui_lbllinea2;
+extern lv_obj_t * ui_Lbllinea2;
 extern lv_obj_t * ui_Button1;
 extern lv_obj_t * ui_Button2;
 extern lv_obj_t * ui_Button3;

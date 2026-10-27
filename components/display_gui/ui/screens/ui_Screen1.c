@@ -7,8 +7,8 @@
 
 lv_obj_t * ui_Screen1 = NULL;
 lv_obj_t * ui_Label1 = NULL;
-lv_obj_t * ui_Lbllinea1 = NULL;
-lv_obj_t * ui_Lbllinea2 = NULL;
+lv_obj_t * ui_lbllinea1 = NULL;
+lv_obj_t * ui_lbllinea2 = NULL;
 lv_obj_t * ui_Button1 = NULL;
 lv_obj_t * ui_Button2 = NULL;
 lv_obj_t * ui_Button3 = NULL;
@@ -18,7 +18,7 @@ void ui_event_Button1(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
 
     if(event_code == LV_EVENT_CLICKED) {
-        _ui_label_set_property(ui_Lbllinea1, _UI_LABEL_PROPERTY_TEXT, "hola");
+        _ui_label_set_property(ui_lbllinea1, _UI_LABEL_PROPERTY_TEXT, "hola");
     }
     if(event_code == LV_EVENT_CLICKED) {
         ui_previo(e);
@@ -40,21 +40,21 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_align(ui_Label1, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label1, "VENDING MACHINNE\n");
 
-    ui_Lbllinea1 = lv_label_create(ui_Screen1);
-    lv_obj_set_width(ui_Lbllinea1, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Lbllinea1, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Lbllinea1, -111);
-    lv_obj_set_y(ui_Lbllinea1, -15);
-    lv_obj_set_align(ui_Lbllinea1, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Lbllinea1, "linea 1\n");
+    ui_lbllinea1 = lv_label_create(ui_Screen1);
+    lv_obj_set_width(ui_lbllinea1, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_lbllinea1, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_lbllinea1, -111);
+    lv_obj_set_y(ui_lbllinea1, -15);
+    lv_obj_set_align(ui_lbllinea1, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_lbllinea1, "linea 1\n");
 
-    ui_Lbllinea2 = lv_label_create(ui_Screen1);
-    lv_obj_set_width(ui_Lbllinea2, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Lbllinea2, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Lbllinea2, -112);
-    lv_obj_set_y(ui_Lbllinea2, 44);
-    lv_obj_set_align(ui_Lbllinea2, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Lbllinea2, "linea 2");
+    ui_lbllinea2 = lv_label_create(ui_Screen1);
+    lv_obj_set_width(ui_lbllinea2, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_lbllinea2, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_lbllinea2, -112);
+    lv_obj_set_y(ui_lbllinea2, 44);
+    lv_obj_set_align(ui_lbllinea2, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_lbllinea2, "linea 2");
 
     ui_Button1 = lv_button_create(ui_Screen1);
     lv_obj_set_width(ui_Button1, 57);
@@ -98,8 +98,8 @@ void ui_Screen1_screen_destroy(void)
     // NULL screen variables
     ui_Screen1 = NULL;
     ui_Label1 = NULL;
-    ui_Lbllinea1 = NULL;
-    ui_Lbllinea2 = NULL;
+    ui_lbllinea1 = NULL;
+    ui_lbllinea2 = NULL;
     ui_Button1 = NULL;
     ui_Button2 = NULL;
     ui_Button3 = NULL;

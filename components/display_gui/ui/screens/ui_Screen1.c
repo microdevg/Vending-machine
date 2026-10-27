@@ -13,6 +13,17 @@ lv_obj_t * ui_Button1 = NULL;
 lv_obj_t * ui_Button2 = NULL;
 lv_obj_t * ui_Button3 = NULL;
 // event funtions
+void ui_event_Button1(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_label_set_property(ui_Lbllinea1, _UI_LABEL_PROPERTY_TEXT, "hola");
+    }
+    if(event_code == LV_EVENT_CLICKED) {
+        ui_previo(e);
+    }
+}
 
 // build funtions
 
@@ -75,6 +86,8 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_align(ui_Button3, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_Button3, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_remove_flag(ui_Button3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    lv_obj_add_event_cb(ui_Button1, ui_event_Button1, LV_EVENT_ALL, NULL);
 
 }
 
